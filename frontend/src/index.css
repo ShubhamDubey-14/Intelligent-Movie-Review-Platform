@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #fcfcfd;
+    --bg-secondary: #f4f4f7;
+    --bg-card: #ffffff;
+    --bg-card-hover: #f9f9fb;
+    --border-subtle: #e4e4e7;
+    --border-strong: #d4d4d8;
+    --text-primary: #09090b;
+    --text-secondary: #52525b;
+    --text-muted: #71717a;
+    --accent-glow: rgba(16, 185, 129, 0.12);
+  }
+
+  html.dark {
+    --bg-primary: #0c0d0e;
+    --bg-secondary: #141517;
+    --bg-card: #18191c;
+    --bg-card-hover: #202226;
+    --border-subtle: #27272a;
+    --border-strong: #3f3f46;
+    --text-primary: #f4f4f5;
+    --text-secondary: #a1a1aa;
+    --text-muted: #71717a;
+    --accent-glow: rgba(16, 185, 129, 0.18);
+  }
+
+  html.midnight {
+    --bg-primary: #030305;
+    --bg-secondary: #07070a;
+    --bg-card: #0c0d12;
+    --bg-card-hover: #13141c;
+    --border-subtle: #1e202d;
+    --border-strong: #2c2e3f;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --accent-glow: rgba(16, 185, 129, 0.28);
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(113, 113, 122, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(113, 113, 122, 0.45);
+}
+
+/* Glassmorphism helpers */
+.glass-panel {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  backdrop-filter: blur(12px);
+}
+
+.glass-panel-hover:hover {
+  background-color: var(--bg-card-hover);
+  border-color: var(--border-strong);
+}
+
+/* Subtle glow animations */
+.glow-border-emerald {
+  box-shadow: 0 0 20px -3px rgba(16, 185, 129, 0.22);
+}
+
+.glow-border-indigo {
+  box-shadow: 0 0 20px -3px rgba(99, 102, 241, 0.22);
+}
