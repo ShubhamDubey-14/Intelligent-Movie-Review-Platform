@@ -178,7 +178,7 @@ export const Navbar = ({ activeSection, setActiveSection }) => {
 
           {/* GitHub Project Link */}
           <a
-            href="https://github.com"
+            href="https://github.com/ShubhamDubey-14/Intelligent-Movie-Review-Platform"
             target="_blank"
             rel="noreferrer"
             className="p-2 rounded-lg transition-colors hover:opacity-80"
